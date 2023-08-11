@@ -9,7 +9,9 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
+        <div className='p-5'>
         <About />
+        </div>
         <Experience />
         <Tech />
         <Works />
