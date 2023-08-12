@@ -41,7 +41,7 @@ const About = () => {
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius maiores quae rerum repellendus illo recusandae, exercitationem corrupti earum voluptate similique perspiciatis. Aliquid, voluptatum deserunt sint esse ducimus voluptate magnam porro assumenda quas ad maiores distinctio. Itaque sit ea similique culpa voluptatem molestiae iusto inventore sequi facilis, nemo hic numquam molestias eos illo doloribus ut dolore, temporibus non mollitia nesciunt obcaecati! Et suscipit totam natus, distinctio unde magni hic doloremque, culpa nesciunt a, deserunt in illo atque. Voluptatem, fugit asperiores? Ut odit ea consequuntur magnam quisquam? Impedit officiis voluptate dolores, quis ab ut esse assumenda beatae facilis ad ipsam commodi officia?
       </motion.p>
 
-      <div className='mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
+      <div className='mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-0'>
         {
           services.map((service, index) => (
             <ServiceCard key={service.title} index={index} {...service} />
@@ -52,4 +52,4 @@ const About = () => {
   )
 }
 
-export default SectionWrapper(About,'about');
+export default SectionWrapper(About, 'about');
