@@ -4,6 +4,8 @@ import { styles } from "../styles"
 import { SectionWrapper } from "../hoc"
 import { achievements } from "../constants"
 import { fadeIn, textVariant } from "../utils/motion"
+import Modal from "./Modal"
+import { useState } from 'react';
 
 
 
@@ -20,20 +22,20 @@ const AchievementCard = ({ index, name, description, image }) => (
             className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
         >
             <div className="relative w-full h-[230px] ">
-                <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl" />                
+                <img src={image} alt={name} className="w-full h-full object-cover rounded-2xl" />
             </div>
 
             <div className="mt-5">
                 <h3 className="text-white font-bold text-[1.8rem]">{name}</h3>
                 <p className="mt-2 text-secondary text-[0.9rem]">{description}</p>
             </div>
-
         </Tilt>
     </motion.div>
 )
 
 
 const Achievements = () => {
+    const [showModal, setShowModal] = useState(false);
     return (
         <>
             <motion.div
