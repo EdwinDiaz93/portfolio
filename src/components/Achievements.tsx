@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 
 
-const AchievementCard = ({ index, name, description, image }) => (
+const AchievementCard = ({ index, name, description, image }:any) => (
     <motion.div
         variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
     >

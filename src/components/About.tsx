@@ -6,7 +6,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 
 
-const ServiceCard = ({ index, title, icon }) => {
+const ServiceCard = ({ index, title, icon }:any) => {
   return (
     <Tilt className="sm:w-[15rem] w-full">
       <motion.div
