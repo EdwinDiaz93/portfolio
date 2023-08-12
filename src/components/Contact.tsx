@@ -1,6 +1,6 @@
-import { useState, useRef } from "react"
 import { useForm } from "react-hook-form"
 import { motion } from "framer-motion"
+import Swal from "sweetalert2"
 import emailjs from '@emailjs/browser'
 import { styles } from "../styles"
 import { EarthCanvas } from "./canvas"
@@ -42,7 +42,13 @@ const Contact = () => {
       },
       'YPDbJGiJZacDI5CFF'
     ).then(() => {
-      alert('Thank you. I will get back to you  as soon as possible');
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Thank you. I will get back to you  as soon as possible',
+        showConfirmButton: false,
+        timer: 2000
+      });
       reset({
         name: '',
         email: '',
@@ -50,15 +56,21 @@ const Contact = () => {
       })
     }).catch((err) => {
       console.log(err);
-      alert('Something wen wrong');
+      Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'something went wrong',
+        showConfirmButton: false,
+        timer: 2000
+      });
     })
   }
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overfow-hidden">
+    <div className="xl:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 overfow-hidden">
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="flex-1 bg-black-100 p-8 rounded-2xl"
       >
         <p className={`${styles.sectionSubText}`}>Get in touch</p>
         <h3 className={`${styles.sectionHeadText}`}>Contact.</h3>
