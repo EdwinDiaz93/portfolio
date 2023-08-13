@@ -5,12 +5,13 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 
 
-const TechCard = ({ index, name, icon }:any) => {
+const TechCard = ({ index, name, icon,url }:any) => {
   return (
     <Tilt className="sm:w-[15rem] w-full">
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card cursor-pointer'
+        onClick={()=>window.open(url,'_blank')}
       >
         <div
           options={{

@@ -67,54 +67,67 @@ const technologies = [
   {
     name: "HTML 5",
     icon: html,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
   },
   {
     name: "CSS 3",
     icon: css,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
   },
   {
     name: "JavaScript",
     icon: javascript,
+    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
   },
   {
     name: "TypeScript",
     icon: typescript,
+    url: 'https://www.typescriptlang.org/docs/',
   },
   {
     name: "React JS",
     icon: reactjs,
+    url: 'https://legacy.reactjs.org/docs/getting-started.html',
   },
   {
     name: "Redux Toolkit",
     icon: redux,
+    url: 'https://redux-toolkit.js.org/',
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
+    url: 'https://tailwindcss.com/',
   },
   {
     name: "Node JS",
     icon: nodejs,
+    url: 'https://nodejs.org/es',
   },
   {
     name: "MongoDB",
     icon: mongodb,
+    url: 'https://www.mongodb.com/es',
   },
   {
     name: "Three JS",
     icon: threejs,
+    url: 'https://threejs.org/',
   },
   {
     name: "git",
     icon: git,
+    url: 'https://git-scm.com/',
   },
   {
     name: "figma",
     icon: figma,
+    url: 'https://www.figma.com/',
   },
   {
     name: "docker",
     icon: docker,
+    url: 'https://www.docker.com/',
   },
 ];
 
