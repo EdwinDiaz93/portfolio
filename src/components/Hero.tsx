@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { styles } from "../styles"
-import { ComputersCanvas } from "./canvas"
+import { fadeIn, textVariant } from "../utils/motion"
 
 
 const Hero = () => {
@@ -28,10 +28,22 @@ const Hero = () => {
             I devlop 3D visuals, user <br className="sm:block hidden " />
             interfaces and web applications
           </p>
+          <motion.p variants={fadeIn('left', '', 0.1, 1)} className='mt-4 text-secondary text-[1.2rem] '>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius maiores quae rerum repellendus illo recusandae
+          </motion.p>
+
+          <motion.div className="flex flex-row flex-wrap mt-20">
+            <button
+              className="border-4 border-secondary px-2 py-3 rounded-lg font-semibold hover:border-[#915eff] hover:text-[#915eff] transition-all duration-500"
+            >Get my resume</button>
+          </motion.div>
+
         </div>
+
       </div>
 
-      <ComputersCanvas />
+
+
 
       <div className="absolute xs:-bottom-0 bottom-0 w-full flex justify-center items-center">
         <a href="#about">
@@ -46,7 +58,7 @@ const Hero = () => {
                 repeatType: 'loop',
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
-            >              
+            >
             </motion.div>
           </div>
         </a>
