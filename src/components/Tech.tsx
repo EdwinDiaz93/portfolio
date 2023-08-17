@@ -5,13 +5,13 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../utils/motion';
 
 
-const TechCard = ({ index, name, icon,url }:any) => {
+const TechCard = ({ index, name, icon, url }: any) => {
   return (
     <Tilt className="sm:w-[15rem] w-full">
       <motion.div
         variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
         className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card cursor-pointer'
-        onClick={()=>window.open(url,'_blank')}
+        onClick={() => window.open(url, '_blank')}
       >
         <div
           options={{
@@ -32,13 +32,14 @@ const TechCard = ({ index, name, icon,url }:any) => {
 const Tech = () => {
   return (
     <div className='flex flex-row flex-wrap justify-center gap-10'>
-      {technologies.map((technology) => (
+      {technologies.map((technology, index) => (
         <TechCard
           key={technology.name}
           {...technology}
+          index={index}
           className='w-28 h-28'
         >
-          
+
         </TechCard>
       ))}
     </div>
